@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The band</title>
-    <!-- Đổi icon quả địa cầu mặc định -->
     <link rel="icon" href="./assets/img/icon-page.jfif" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -138,9 +137,7 @@
                         <p><i class="ti-mobile"></i>Phone: +00 151515</p>
                         <p><i class="ti-email"></i>Email: mail@mail.com</p>
                         -->
-
-                        <!-- Cách này giúp liên kết dễ hơn vd nhấp vào sđt sẽ gọi lun, 
-                            nhấp vào email sẽ chuyển tới email-->
+                        
                         <p><i class="ti-mobile"></i>Phone: <a href="tel:+00 151515">+00 151515</a></p>
                         <p><i class="ti-email"></i>Email: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
                     </div>
@@ -224,23 +221,18 @@
         const modalContainer = document.querySelector('.js-modal-container')
         const modalClose = document.querySelector('.js-modal-close')
 
-        // Hàm hiển thị modal mua vé ( thêm class open vào modal)
         function showBuyTickets() {
             modal.classList.add('open')
         }
 
-        // Hàm ẩn modal mua vé ( gỡ bỏ class open của modal)
         function hideBuyTickets() {
             modal.classList.remove('open')
         }
 
-        // Lặp qua từng thẻ button và nghe hành vi click
         for(const buyBtn of buyBtns) {
             buyBtn.addEventListener('click', showBuyTickets)
         }
-        // for dùng cho 1 list ds (có All)
 
-        // Nghe hành vi click vào button close
         modalClose.addEventListener('click', hideBuyTickets)
 
         modal.addEventListener('click', hideBuyTickets)
